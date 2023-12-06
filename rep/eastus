@@ -1,0 +1,9 @@
+# Set your Azure subscription
+az account set --subscription "d92fd2dc-7aba-44c2-b409-9a452c9d7f4e"
+
+# Define resource group parameters
+$resourceGroupName = "rg-1"
+$location = "East US"
+
+# Create the resource group
+az group create --name $resourceGroupName --location $location
