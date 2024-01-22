@@ -22,11 +22,6 @@ resource "azurerm_virtual_network" "vnet" {
   name                = var.vnet_name
   resource_group_name = var.resource_group_name
   location            = var.location
-  address_space       = ["10.1.0.0/16"]  # Customize the address space as needed
+  address_space       = ["10.5.0.0/16"]  # Customize the address space as needed
 }
- resource "azurerm_subnet" "subnet" {
-  name                 = "internal"
-  resource_group_name  = var.resource_group_name
-  virtual_network_name = var.vnet_name
-  address_prefixes     = ["10.1.2.0/24"]
-}
+ 
